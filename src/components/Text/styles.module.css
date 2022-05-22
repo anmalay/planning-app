@@ -1,0 +1,9 @@
+.text {
+  font-size: var(--text-size-description1);
+}
+
+@media (min-width: 1280px) {
+  .text {
+    font-size: var(--text-size-body);
+  }
+}

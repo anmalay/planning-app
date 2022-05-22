@@ -1,0 +1,32 @@
+.tabsRoot {
+
+}
+
+.tabsBox {
+
+}
+
+.tabsItem {
+    width: 100%;
+    cursor: pointer;
+
+    border-bottom: 2px solid var(--color-background-gray-200);
+    color: var(--color-text-tertiary);
+}
+
+.tabsItem.active {
+    border-bottom-color: var(--color-background-accent);
+    color: var(--color-text-accent);
+}
+
+.tabsItem:hover {
+    color: var(--color-text-accent);
+}
+
+.tabName {
+    padding-bottom: 20px;
+}
+
+.tabContentRoot {
+    padding-top: 20px;
+}

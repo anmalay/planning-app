@@ -1,0 +1,73 @@
+/** ver 1.00 */
+
+:root {
+  /** Text sizes */
+  --text-size-heading1: 5.6em;
+  --text-size-heading2: 4em;
+  --text-size-heading3: 3.2em;
+  --text-size-heading4: 2.4em;
+  --text-size-heading5: 2em;
+  --text-size-subheading: 1.8em;
+  --text-size-body: 1.6em;
+  --text-size-description1: 1.4em;
+  --text-size-description2: 1.2em;
+  --text-size-description3: 1em;
+
+  --text-line-height-heading1: 1.4; /** 1.4 пока потому что надо подумать как правильно рассчитать */
+  --text-line-height-heading2: 1.4;
+  --text-line-height-heading3: 1.4;
+  --text-line-height-heading4: 1.4;
+  --text-line-height-heading5: 1.4;
+  --text-line-height-subheading: 1.4;
+  --text-line-height-body: 1.4;
+  --text-line-height-description1: 1.4;
+  --text-line-height-description2: 1.4;
+  --text-line-height-description3: 1.4;
+
+  /** Colors / Text & Icons */
+  --color-text-primary: #494954;
+  --color-text-secondary: #9393a1;
+  --color-text-tertiary: #bbbbc3;
+
+  --color-text-inverse: #ffffff;
+  --color-text-accent: #ef533a;
+
+  --color-icons-accent: #ef533a;
+  --color-icons-dark: #646478;
+  --color-brand-red: #ef533a;
+  --color-brand-white: #ffffff;
+  --color-brand-yellow: #ffeb36;
+
+  /** Colors / Buttons */
+  --color-button-default: #ffb039;
+  --color-button-hover: #ffc56e;
+  --color-button-pressed: #e59e33;
+  --color-button-disable: #ffe3b8;
+
+  --color-button-text-default: #ffffff;
+  --color-button-text-disable: #bbbbc3;
+
+  /** Colors / Background & Strokes */
+  --color-background-black: #252525;
+  --color-background-default: #ffffff;
+  --color-background-gray-100: #f7f7f8;
+  --color-background-gray-200: #e9e9ef;
+  --color-background-gray-300: #dadae0;
+  --color-background-gray-400: #b1b1bb;
+  --color-background-accent: #ef533a;
+  --color-background-primary: #f6f6f9;
+
+  --color-stroke-accent: #ef533a;
+  --color-stroke-dark: #646478;
+  --color-stroke-light: #bbbbc3;
+
+  /** Colors / Other */
+  --color-other-green: #6dc12a;
+  --color-other-orange: #ffb039;
+  --color-other-blue: #4392d5;
+  --color-other-red: #eb2121;
+
+  /** Effects */
+  --effect-shadow1: 0px 4px 12px rgba(30, 33, 34, 0.1);
+  --effect-shadow2: 0px 8px 20px rgba(48, 48, 60, 0.12);
+}

@@ -1,0 +1,116 @@
+.inputWrapper {
+  width: 100%;
+  height: 60px;
+
+  position: relative;
+}
+
+.inputHiddenBtn {
+  position: absolute;
+  top: 17px;
+  right: 18px;
+  cursor: pointer;
+}
+
+.icon {
+  position: absolute;
+  top: 24px;
+  left: 0px;
+}
+
+.iconWithMod {
+  position: absolute;
+  width: 52px;
+  top: 20px;
+  left: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.inputElement {
+  width: 100%;
+  height: 45px;
+  margin-top: 15px;
+  z-index: 123;
+
+  font-size: var(--text-size-body);
+  font-weight: 500;
+  outline: none;
+  border-bottom: 2px solid var(--color-text-tertiary);
+}
+
+.inputElement.withIcon {
+  padding-left: 36px;
+}
+
+.inputElement.withMod {
+  padding-left: 60px;
+}
+
+.inputElement:focus {
+  border-bottom: 2px solid var(--color-text-accent);
+}
+
+.codeDropdown {
+  position: absolute;
+  top: 18px;
+  left: 6px;
+}
+
+.placeholder {
+  display: block;
+  line-height: 0;
+  transform: translate(0px, -30px);
+  font-size: var(--text-size-body);
+  color: var(--color-text-secondary);
+}
+
+.placeholder.withIcon {
+  transform: translate(32px, -26px);
+}
+
+.placeholder.withMod {
+  transform: translate(58px, -26px);
+  width: fit-content;
+}
+
+.errorBox {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.error {
+  color: var(--color-other-red);
+}
+
+@supports (not (-ms-ime-align: auto)) {
+  .placeholder {
+    transform: translate(0px, -30px);
+    transition: all 0.2s ease-out;
+  }
+
+  .inputElement:focus + .placeholder,
+  .inputElement:not(:placeholder-shown) + .placeholder,
+  .visible + .placeholder {
+    transform: translate(0px, -50px);
+    font-size: var(--text-size-description2);
+    color: var(--color-text-primary);
+  }
+
+  .withError {
+    color: var(--color-other-red);
+    transform: translate(0px, -30px);
+    transition: all 0.2s ease-out;
+  }
+
+  .inputElement:focus + .withError,
+  .inputElement:not(:placeholder-shown) + .withError,
+  .visible + .withError {
+    transform: translate(0px, -50px);
+    font-size: var(--text-size-description2);
+    color: var(--color-other-red);
+  }
+}

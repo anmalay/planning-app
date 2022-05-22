@@ -1,0 +1,128 @@
+.stiker::after {
+  z-index: 1;
+
+  display: block;
+  content: '';
+  background-color: var(--color-text-inverse);
+
+  width: 18px;
+  height: 18px;
+  top: 0;
+  right: 0;
+  position: absolute;
+
+  border: 1.5px dashed var(--color-button-default);
+  border-radius: 4px;
+
+  border-bottom: 0;
+  border-left: 0;
+  border-bottom-right-radius: 0;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
+.stiker::before {
+  z-index: 2;
+
+  display: block;
+  content: '';
+
+  top: 0;
+  right: 0;
+  position: absolute;
+
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 18px 0 0 18px;
+  border-color: transparent transparent transparent var(--color-button-pressed);
+}
+
+.button {
+  position: relative;
+  border-radius: 4px;
+  background-color: var(--color-button-default);
+  padding: 8px 24px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+
+  cursor: pointer;
+  box-shadow: var(--effect-shadow2);
+  display: flex;
+  flex-direction: row;
+}
+
+.stiker {
+  padding: 7px 24px;
+}
+
+.button:hover:not(.text):not(.control) {
+  background-color: var(--color-button-hover);
+}
+
+.stiker:hover:not(.text):not(.control) ::before {
+  filter: opacity(0.7);
+}
+
+.button:disabled:not(.text):not(.control) {
+  background-color: var(--color-button-disable);
+  cursor: not-allowed;
+}
+
+.stiker:disabled:not(.text):not(.control) ::before {
+  filter: opacity(0.4);
+  border-color: transparent transparent transparent #c78625;
+}
+
+.button:active:not(:disabled):not(.text):not(.control) {
+  background-color: var(--color-button-pressed);
+}
+
+.stiker:active:not(:disabled):not(.text):not(.control) ::before {
+  filter: opacity(1);
+  border-color: transparent transparent transparent #c78625;
+}
+
+.text {
+  padding: 0;
+  background: transparent;
+  color: var(--color-text-secondary);
+  box-shadow: none;
+}
+
+.text:hover {
+  color: var(--color-text-primary);
+}
+
+.text:disabled {
+  color: var(--color-button-text-disable);
+  cursor: not-allowed;
+}
+
+.control {
+  cursor: pointer;
+  width: 40px;
+  height: 48px;
+  border-radius: 50%;
+  background-color: var(--color-background-default);
+  box-shadow: var(--effect-shadow2);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  position: absolute;
+  top: 40%;
+
+  transition: all 0.15s ease-in;
+}
+
+.control:active {
+  transform: scale(0.8);
+}
+
+.control:hover {
+  background-color: var(--color-background-gray-200);
+}
