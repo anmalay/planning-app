@@ -10,12 +10,12 @@ import {
   UnpackNestedValue,
   UseFormReturn,
 } from 'react-hook-form';
-import { Box } from 'src/components/Box';
-import { Icon } from 'src/components/Icon';
-import { IconName } from 'src/components/Icon/types';
-import { Text } from 'src/components/Text';
-import { CSSColors } from 'src/types';
+import { CSSColors } from 'types';
 
+import Box from '../Box';
+import { Icon } from '../Icon';
+import { IconName } from '../Icon/types';
+import { Text } from '../Text';
 import styles from './styles.module.css';
 
 export type DropdownItem = {

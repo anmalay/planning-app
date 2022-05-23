@@ -1,6 +1,5 @@
 import React, { memo } from 'react';
-import { IconName } from 'src/components/Icon/types';
-import { CSSColors } from 'src/types';
+import { CSSColors } from 'types';
 
 import AddIcon from './assets/Add.svg';
 import ArrowLeftIcon from './assets/Arrow_left.svg';
@@ -59,6 +58,7 @@ import Vkontakte from './assets/vk.svg';
 import WalletIcon from './assets/Wallet.svg';
 import WithdrawalIcon from './assets/Withdrawal.svg';
 import Youtube from './assets/yt.svg';
+import { IconName } from './types';
 
 /**
  * @param {name} Название

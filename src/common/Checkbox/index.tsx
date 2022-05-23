@@ -1,8 +1,8 @@
 import classNames from 'classnames';
 import { Path, RegisterOptions, UseFormReturn } from 'react-hook-form';
-import { Box } from 'src/components/Box';
-import Checkmark from 'src/components/Icon/assets/checkMark.svg';
+import { Box } from 'src/common/Box';
 
+// import Checkmark from 'src/components/Icon/assets/checkMark.svg';
 import styles from './styles.module.css';
 
 export type CheckboxProps<FormType> = {
@@ -44,7 +44,8 @@ export function Checkbox<FormType>(props: CheckboxProps<FormType>): JSX.Element 
             [styles.checked]: watch(name),
           })}
         >
-          {watch(name) ? <Checkmark color="white" /> : null}
+          {/*  <Checkmark color="white" />  */}
+          {watch(name) ? 'x' : null}
         </Box>
 
         <div className={styles.labelContent}>{label}</div>

@@ -1,10 +1,10 @@
 import classNames from 'classnames';
 import { memo } from 'react';
-import { Icon } from 'src/components/Icon';
-import { IconName } from 'src/components/Icon/types';
-import { Text } from 'src/components/Text';
-import { CSSColors } from 'src/types';
+import { CSSColors } from 'types';
 
+import { Icon } from '../Icon';
+import { IconName } from '../Icon/types';
+import { Text } from '../Text';
 import styles from './styles.module.css';
 
 export type ButtonProps = {

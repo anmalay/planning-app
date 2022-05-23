@@ -1,4 +1,3 @@
-import { ErrorMessage, FieldValuesFromFieldErrors } from '@hookform/error-message';
 import classNames from 'classnames';
 import React, { useState } from 'react';
 import {
@@ -12,11 +11,11 @@ import {
   UseFormReturn,
 } from 'react-hook-form';
 import InputMask from 'react-input-mask';
-import { Dropdown } from 'src/components/Dropdown';
-import { Icon } from 'src/components/Icon';
-import { IconName } from 'src/components/Icon/types';
-import { CSSColors } from 'src/types';
+import { CSSColors } from 'types';
 
+import { Dropdown } from '../Dropdown';
+import { Icon } from '../Icon';
+import { IconName } from '../Icon/types';
 import { codesData } from './codesData';
 import styles from './styles.module.css';
 
@@ -63,7 +62,7 @@ export function Input<FormType>({
   const phoneCodes = codesData.map((item) => ({
     id: item.id,
     value: item.hint,
-    icon: item.icon,
+    // icon: item.icon,
     name: item.name,
   }));
 
@@ -83,11 +82,10 @@ export function Input<FormType>({
     </div>
   );
 
-  const iconElm = icon !== undefined && (
-    <div className={styles.icon}>
-      <Icon name={icon} size={24} color={iconColor} />
-    </div>
-  );
+  // const iconElm = icon !== undefined && (
+  //   <div className={styles.icon}>
+  //   </div>
+  // );
 
   const dropdown = phoneCodes && modificatorName && (
     <div className={styles.iconWithMod}>
@@ -149,7 +147,7 @@ export function Input<FormType>({
 
   return (
     <div className={classNames(styles.inputWrapper, className.wrapper)}>
-      {iconElm}
+      {/* {iconElm} */}
 
       {input}
 
@@ -170,7 +168,7 @@ export function Input<FormType>({
 
       {hiddenBtn}
 
-      <ErrorMessage
+      {/* <ErrorMessage
         errors={errors}
         name={
           name as unknown as FieldName<
@@ -183,7 +181,7 @@ export function Input<FormType>({
             <span className={styles.error}>{message}</span>
           </div>
         )}
-      />
+      /> */}
     </div>
   );
 }

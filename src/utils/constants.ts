@@ -1,6 +1,7 @@
 import { format } from 'date-fns';
-import { IconName } from 'src/components/Icon/types';
-import { text } from 'src/utils/text';
+import { IconName } from 'src/common/Icon/types';
+
+import { text } from './text';
 
 export const DEFAULT_DATE_FORMAT_WITH_TIME = (date: Date) => format(date, 'dd.MM.yyyy hh:mm');
 export const DEFAULT_DATE_FORMAT = (date: Date) => format(date, 'dd.MM.yyyy');

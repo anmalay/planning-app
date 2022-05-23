@@ -1,5 +1,6 @@
-import { DeepKeys } from 'src/types';
-import { langvars } from 'src/utils/langvars';
+import { DeepKeys } from 'types';
+
+import { langvars } from './langvars';
 
 type Paths = DeepKeys<typeof langvars>;
 export function traverse(path: Paths): string {

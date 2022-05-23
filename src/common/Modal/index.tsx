@@ -1,8 +1,5 @@
 import classNames from 'classnames';
-import { Box } from 'src/components/Box';
-import { Button } from 'src/components/Button';
-import { Icon } from 'src/components/Icon';
-import { Text } from 'src/components/Text';
+import { Box, Button, Icon, Text } from 'src/common';
 import useBodyModal from 'src/utils/useBodyModal';
 import useRandomDOMId from 'src/utils/useRandomDOMId';
 

@@ -1,6 +1,7 @@
-import { DeepKeys, DeepKeysFiltered } from 'src/types';
-import { langvars } from 'src/utils/langvars';
-import { traverse } from 'src/utils/traverse';
+import { DeepKeys, DeepKeysFiltered } from 'types';
+
+import { langvars } from './langvars';
+import { traverse } from './traverse';
 
 type Paths = DeepKeysFiltered<DeepKeys<typeof langvars>, typeof langvars, string | string[]>;
 

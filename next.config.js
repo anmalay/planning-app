@@ -1,33 +1,21 @@
-const LK_SERVICE_ADDRESS = `http://${
-  process.env.LK_SERVICE_ADDRESS || "localhost:3001"
-}`;
-
 /** @type {import('next').NextConfig} */
-module.exports = {
-  async rewrites() {
-    return [
-      {
-        source: "/api/lk/:path*",
-        destination: `${LK_SERVICE_ADDRESS}/:path*`, // Proxy to Backend
-      },
-    ];
-  },
+const nextConfig = {
+  reactStrictMode: true,
 
   webpack(config) {
     config.module.rules.push({
-      test: /\.svg$/,
+      test: /\.svg$/i,
+      issuer: /\.[jt]sx?$/,
       use: [
         {
-          loader: "@svgr/webpack",
+          loader: '@svgr/webpack',
           options: {
             svgoConfig: {
-              plugins: {
-                removeViewBox: false,
-                cleanupIDs: false,
-                removeTitle: false,
-                convertShapeToPath: false,
-                mergePaths: false,
-              },
+              removeViewBox: false,
+              cleanupIDs: false,
+              removeTitle: false,
+              convertShapeToPath: false,
+              mergePaths: false,
             },
           },
         },
@@ -37,7 +25,19 @@ module.exports = {
     return config;
   },
 
+  // async rewrites() {
+  //   return [
+  //     {
+  //       source: '/api/:path*',
+  //       destination: 'http://front.skidka/api/:path*' // Proxy to Backend
+  //     }
+  //   ]
+  // },
+
   images: {
     deviceSizes: [320, 640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    domains: ['front.skidka', 'new.skidka.ru'],
   },
 };
+
+module.exports = nextConfig;

@@ -1,5 +1,6 @@
-import { IconName } from 'src/components/Icon/types';
 import { text } from 'src/utils';
+
+import { IconName } from '../Icon/types';
 
 export interface ICcodesData {
   id: string;

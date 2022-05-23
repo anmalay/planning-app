@@ -1,6 +1,6 @@
 import classNames from 'classnames';
 import { CSSProperties, memo } from 'react';
-import { CSSColors, CSSTextLineHeights, CSSTextSizes, CSSTextWeight } from 'src/types';
+import { CSSColors, CSSTextLineHeights, CSSTextSizes, CSSTextWeight } from 'types';
 
 import styles from './styles.module.css';
 
